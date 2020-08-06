@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/index.css">
+    <link rel="stylesheet" href="../style/i-main.css">
+    <link rel="stylesheet" href="../style/product.css">
+    <link rel="stylesheet" href="../font_s9nw9lts7yj/iconfont.css">
+    <link rel="stylesheet" href="../font_index1/iconfont.css">
+    <link rel="stylesheet" href="../style/product-foot.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/require.js" data-main="../js/main.product"></script>
+    <style>
+        .show{
+            display: block !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="shortcut">
+        <div class="layout">
+            <div class="s-sub">
+                <ul>
+                    <li><a href="http://localhost/HUAWEISHOP/src/html/index1.html">首页</a></li>
+                    <li><a href="">华为官网</a></li>
+                    <li><a href="">荣耀官网</a></li>
+                    <li><a href="">花粉俱乐部</a></li>
+                    <li><a href="">V码(优购码)</a></li>
+                    <li><a href="">企业购</a></li>
+                    <li><a href="">Select Region</a></li>
+                    <li>
+                        <div class="s-dropdown">
+                            <div class="h">
+                                <a href="" class="icon-dropdown">更多精彩</a>
+                            </div>
+                            <div class="b">
+                                <div class="dropdown-more w-119">
+                                    <dl>
+                                        <dt><a href="">EMUI</a></dt>
+                                        <dt><a href="">应用市场</a></dt>
+                                        <dt><a href="">华为终端云空间</a></dt>
+                                        <dt><a href="">开发者联盟</a></dt>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="s-main ">
+                <ul>
+                    <li id="unlogin_status">
+                        <div class="header-toolbar">
+                            <div class="header-toolbar-item">
+                                <div class="i-login">
+                                    <div class="h">
+                                        <a href="login.html" id="top-index-loginUrl">请登录</a>
+                                        <a href="register.html">注册</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="login_status" class="hide"></li>
+                    <li><a href="">我的订单</a></li>
+                    <li>
+                        <div class="s-dropdown s-dropdown-link">
+                            <div class="h">
+                                <a href="" class="icon-dropdown">客户服务</a>
+                            </div>
+                            <div class="b">
+                                <div class="dropdown-more">
+                                    <dl>
+                                        <dt><a href="">服务中心</a></dt>
+                                        <dt><a href="">联系客服</a></dt>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="s-dropdown">
+                            <div class="h">
+                                <a href="#" class="icon-dropdown">网站导航</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="downloadApp">
+                        <div class="s-dropdown">
+                            <div class="h">
+                                <a href="#" class="icon-dropdown">手机版</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="s-dropdown s-dropdown-minicart">
+                            <div class="h h-wide" id="header-toolbar-minicart">
+                                <a href="http://localhost/HUAWEISHOP/src/html/shoppingcart.html" class="iconfont icon-icon-">
+                                    <span>
+                                            购物车(<span id="header-cart-total">0</span>)
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- VMALL开始 -->
+    <div class="header">
+        <div class="layout">
+            <div class="left">
+                <div class="logo">
+                    <a href="#">
+                        <img src="https://res.vmallres.com/pimages//common/config/logo/SXppnESYv4K11DBxDFc2.png" alt="">
+                    </a>
+                </div>
+                <div class="naver">
+                    <ul class="clearfix">
+                        <ul class="naver-list">
+                            <li class="img">
+                                <a href=""><img src="https://res.vmallres.com/pimages//navigation/icon/GrguiqzHENWVYHYWyHBM.png" alt=""></a>
+                            </li>
+                            <li class="img">
+                                <a href=""><img src="https://res.vmallres.com/pimages//navigation/icon/AHwTUFRpDSQyuIZ7tLJz.png" alt=""></a>
+                            </li>
+                            <li id="huawei" class="naver-red"><a href=""><span>华为 P40 系列</span></a></li>
+                            <li id="honor" class="naver-red"><a href=""><span>荣耀30系列</span></a></li>
+                            <li id="huaweu" class="naver-red"><a href=""><span>安心家居</span></a></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="right">
+                <div class="search-bar relative">
+                    <div class="search-bar-form">
+                        <form action="" method="GET">
+                            <input type="text" class="text" style="outline: 0">
+                            <input type="submit" class="button">
+                            <i class="iconfont icon-fangdajing_huaban1"></i>
+                        </form>
+                    </div>
+                    <div class="search-bar-key">
+                        <div class="searchBar-key">
+                            <a href="" style="color:#CF0A2C">畅想20 Pro</a>
+                            <a href="" style="color: #999">荣耀X10</a>
+                        </div>
+                    </div>
+                    <!-- 点击跳出的搜索框开始 -->
+                    <div class="search-bar-history" id="selected">
+                        <!-- <div id="search-history" class="con hide" style="display: none;">
+                            <p>
+                                <lable>历史纪录</lable>
+                                <span id="cleanUp" class="search-history-btn">清除</span>
+                            </p>
+                        </div> -->
+                        <div id="search-key" class="con hide" style="display: none;">
+                            <p>
+                                <lable>热门搜索</lable>
+                            </p>
+                            <ul id="search-key-list">
+                                <li><a href="">nova 5i Pro</a></li>
+                                <li><a href="">荣耀20i</a></li>
+                                <li><a href="">nova 5i Pro</a></li>
+                                <li><a href="">HUAWEI P30</a></li>
+                                <li><a href="">荣耀9X</a></li>
+                                <li><a href="">nova 5i Pro</a></li>
+                                <li><a href="">nova 5i Pro</a></li>
+                                <li><a href="">nova 5i Pro</a></li>
+                                <li><a href="">nova 5i Pro</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 点击跳出的搜索框结束 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------------- -->
+    <!-- 悬浮栏 -->
+    <div class="hungBar j-hungBar">
+        <div class="hungBar-content">
+            <a href="" title="购物车">
+                <span class="iconfont icon-icon-"></span>
+                <i>购物车</i>
+            </a>
+            <a href="" title="在线客服" id="tools-nav-service-robotim" class="hungBar-service">
+                <span class="iconfont icon-zaixiankefu"></span>
+                <i>在线客服</i>
+            </a>
+            <a href="" title="意见反馈" id="tools-nav-survery" class="hungBar-feedback">
+                <span class="iconfont icon-fuwu"></span>
+                <i>意见反馈</i>
+            </a>
+            <a href="" title="返回顶部" class="hungBar-top" id="hungBar-top">
+                <span class="iconfont icon-fanhuidingbu"></span>
+                <i>返回顶部</i>
+            </a>
+        </div>
+    </div>
+    <!-- 内容页 -->
+    <div class="breadcrumb-area fcn">
+        <a href="/index.html" title="首页">首页&nbsp;&nbsp;</a>&nbsp;>&nbsp;
+        &nbsp;&nbsp;<a href='/list-36' title='&#x624b;&#x673a;'>&#x624b;&#x673a;&nbsp;&nbsp;</a>&nbsp;>&nbsp;
+        &nbsp;&nbsp; <a href='/list-285' title='HUAWEI&#x20;P&#x7cfb;&#x5217;'>HUAWEI&#x20;P&#x7cfb;&#x5217;&nbsp;&nbsp;</a>&nbsp;>&nbsp;
+        &nbsp;&nbsp;<span id="bread-pro-name">HUAWEI&#x20;P40&#x20;5G&#x20;&#x5168;&#x7f51;&#x901a;&#x20;6GB&#x2b;128GB&#xff08;&#x96f6;&#x5ea6;&#x767d;&#xff09;</span></div>
+    </div>
+    <!-- 放大镜 -->
+    <div class="product clearfix" id="procboo">
+        <!-- <div class="fangdaj">
+            <div class="small">
+                <img src="https://res.vmallres.com/pimages/&#x2f;product&#x2f;6901443381340&#x2f;428_428_0927F13E5805FD0FBD065F528D4099ECC6C81DDA5B9E07FAmp.png" >
+                <div class="move"></div>
+            </div>
+            
+            <div class="big">
+                <img src="https://res.vmallres.com/pimages/&#x2f;product&#x2f;6901443381340&#x2f;428_428_0927F13E5805FD0FBD065F528D4099ECC6C81DDA5B9E07FAmp.png" class="bigpic">
+            </div>
+            <div class="foot-a">
+                <div class="iconfont icon-zuo icon-yuan"></div>
+                <div class="footpic">
+                    <img src="https://res.vmallres.com/pimages/&#x2f;product&#x2f;6901443381340&#x2f;428_428_0927F13E5805FD0FBD065F528D4099ECC6C81DDA5B9E07FAmp.png" class="pic-red">
+                    <img src="https://res.vmallres.com/pimages//product/6901443381340/group//800_800_64B94D0DE111F91C306C22DA9C73E9C773EF3AFC87F0D292.png" >
+                    <img src="https://res.vmallres.com/pimages//product/6901443381340/group//800_800_0DB20C4BFCDED62363E43DD10A6D102C8B8484DC61183EA9.png" >
+                    <img src="https://res.vmallres.com/pimages//product/6901443381340/group//800_800_E4EB4C747ECD0FC16C975DC9A326A260B0DC2182907AB9AB.png" >
+                    <img src="https://res.vmallres.com/pimages//product/6901443381340/group//800_800_356AD919B8019D6EA045829EBF407473C22DA50C86E85441.png" >
+                    <img src="https://res.vmallres.com/pimages//product/6901443381340/group//800_800_F8DBEC1C1CB7EE433BCA0A4123A299010D821146141BBC68.png" alt="">
+                    <img src="https://res.vmallres.com/pimages//product/6901443381340/group//800_800_1C735E935BAD0D6076B9475EABBC9F60CB9B733F125553A9.png" alt="">
+                </div>
+                <div class="iconfont icon-zuo-copy icon-yuan"></div>
+            </div>
+        </div>
+        <div class="product-property clearfix relative" style="min-height: 750px; height: auto;width: 730px;; padding-bottom: 103.6px;">
+            <div class="product-property-recommand">
+                <div class="product-meta">
+                    <h1>HUAWEI P40 5G 全网通 8GB+256GB（晨曦金）</h1>
+                </div>
+                <div class="product-slogan product-slogan-hide">
+                    <a href="">①享6期分期免息 ②整点限量赠好礼。老用户加赠延保，点击进入老用户专场>>>以旧换新最高补贴1000元，购机赠送同程旅游900元出行大礼包</a>
+                    <span>麒麟990 5G SoC芯片 5000万超感知徕卡三摄 30倍数字变焦 全网通5G手机</span>
+                </div>
+                <div class="product-info">
+                    <div class="much">
+                        <span>价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格</span>
+                        <i><em>￥</em>4188.00</i>
+                    </div>
+                    <div class="hot-much">
+                        <span>促&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销</span>
+                        <em class="red-much">一站式换新</em>
+                        <i>APP专享，最高补贴1000元</i>
+                    </div>
+                    <div class="hot-much2">
+                        <em class="red-much">整点赠礼</em>
+                        <i>0点/10点/16点/20点下单前100名赠华为手环 4e</i>
+                    </div>
+                    <div class="hot-much2">
+                        <em class="red-much">商品赠券</em>
+                        <i>支付后赠送同程旅行900元出行大礼包</i>
+                    </div>
+                    <div class="hot-much2">
+                        <em class="red-much">商品赠券</em>
+                        <i>支付后赠送华为手机摄影课程</i>
+                    </div>
+                    <div class="hot-much2">
+                        <em class="red-much">分期免息</em>
+                        <i>银联、掌上生活、花呗、工行分期支付可享免息（免息活动适用于单款免息商品订单，含多款商品订单）</i>
+                    </div>
+                    <div class="hot-much2">
+                        <em class="red-much">赠送积分</em>
+                        <i>购买即赠商城积分，积分可抵现~</i>
+                    </div>
+                </div>
+                <div class="product-pulldown clearfix">
+                    <span>服务说明</span>
+                    <a href="javascript:;" class="product-pulldown-btn">
+                        浙江 > 杭州 > 西湖区<i class="iconfont icon-bottom-copy"></i>
+                    </a>
+                    <i><em>现货，</em>今天21:59前付款，预计7月2日(周四)送达 &nbsp; &nbsp;<span class="iconfont icon-wenhao"></span></i>
+                    <h1><i class="iconfont icon-quangou"></i> 已满48元已免运费 &nbsp;&nbsp; <i class="iconfont icon-quangou"></i> 由华为商城负责发货，并提供售后服务</h1>
+                </div>
+                <div class="product-description product-pulldown">
+                    <span>商品编码</span>
+                    <i>2601010188314</i>
+                </div>
+                <div class="hr-5"></div>
+                <div class="hr-4">
+                    <div class="hr-6">选择颜色</div>
+                    <ul>
+                        <li><a href="javascipt:;" class="hr-red"><img src="https://res.vmallres.com/pimages//product/6901443381418/40_40_8AA335126873D608DCA6E0A911876BBC964D127703282A1Cmp.png">&nbsp;亮黑色</a></li>
+                        <li><a href="javascipt:;" ><img src="https://res.vmallres.com/pimages//product/6901443381418/40_40_8AA335126873D608DCA6E0A911876BBC964D127703282A1Cmp.png">&nbsp;深海蓝</a></li>
+                        <li><a href="javascipt:;" ><img src="https://res.vmallres.com/pimages//product/6901443381418/40_40_8AA335126873D608DCA6E0A911876BBC964D127703282A1Cmp.png">&nbsp;晨曦金</a></li>
+                        <li><a href="javascipt:;" ><img src="https://res.vmallres.com/pimages//product/6901443381418/40_40_8AA335126873D608DCA6E0A911876BBC964D127703282A1Cmp.png">&nbsp;零度白</a></li>
+                        <li><a href="javascipt:;" ><img src="https://res.vmallres.com/pimages//product/6901443381418/40_40_8AA335126873D608DCA6E0A911876BBC964D127703282A1Cmp.png">&nbsp;冰霜银</a></li>
+                    </ul>
+                </div>
+                <div class="hr-7"><label for="">选择版本</label>
+                    <ul>
+                        <li><a href="javascipt:;">5G全网通 8GB+256GB</a></li>
+                        <li><a href="javascipt:;">5G全网通 8GB+256GB</a></li>
+                        <li><a href="javascipt:;">5G全网通 8GB+256GB</a></li>
+                    </ul>
+                </div>
+                <div class="hr-8"><label for="">选择套餐</label>
+                    <ul>
+                        <li><a href="javascipt:;">官方标配</a></li>
+                    </ul>
+                </div>
+                <div class="hr-7"><label for="">保障服务</label>
+                    <ul>
+                        <li><a href="javascipt:;">华为无忧服务&nbsp;￥699&nbsp;&nbsp;&nbsp;<span class="iconfont icon-bottom-copy icon-i"></span></a></li>
+                        <li><a href="javascipt:;">碎屏险含后盖&nbsp;￥179.4&nbsp;&nbsp;<span class="iconfont icon-bottom-copy icon-i"></span></a></li>
+                        <li><a href="javascipt:;">延长服务宝一年&nbsp;￥134.4&nbsp;<span class="iconfont icon-bottom-copy icon-i"></span></a></li>
+                    </ul>
+                </div>
+                <div class="hr-7"><label for="">分期免息</label>
+                    <ul>
+                        <li><a href="javascipt:;">掌上分期生活&nbsp;￥699&nbsp;&nbsp;&nbsp;<span class="iconfont icon-bottom-copy icon-i"></span></a></li>
+                        <li><a href="javascipt:;">花呗分期&nbsp;￥699&nbsp;&nbsp;&nbsp;<span class="iconfont icon-bottom-copy icon-i"></span></a></li>
+                    </ul>
+                </div>
+                <div class="hr-9"><label for="">推荐</label>
+                    <ul>
+                        <li><a href="javascipt:;">HUAWEI P40 Pro</a></li>
+                        <li><a href="javascipt:;">HUAWEI VR Glass</a></li>
+                    </ul>
+                </div>
+                <div class="hr-7"><label for="" style="width: 80px;">已选择商品:</label><span style="height: 30px;">亮黑色 / 5G全网通 8GB+128GB / 官方标配</span></div>
+                <div class="product-stock">
+                    <input type="text" placeholder="1" value="1">
+                    <p class="product-stock-btn">
+                        <a id="pro-quantity-plus" href="javascript:;">+</a>
+                        <a id="pro-quantity-minus" href="javascript:;">-</a>
+                    </p>
+                    <a class="product-button01" href="javascript:;">加入购物车</a>
+                    <a class="product-button02" href="javascript:;">立即下单</a>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <!-- -------- -->
+    <div class="hr-20"></div>
+    <ul class="pic-project">
+        <li><img src="https://res.vmallres.com/pimages/detailImg/2020/04/30/7118944F429FC395CB2ADFD581EE11BFE3172508BF9C0C4D.jpg" alt=""></li>
+        <li><img src="https://res.vmallres.com/pimages/detailImg/2020/04/30/64C691A343C66A1B728E821A782CD89A165AF8B31ECA5EFC.jpg" alt=""></li>
+        <li><img src="https://res.vmallres.com/pimages/detailImg/2020/04/30/3AA56CE9C4A1D9CFA3BC89102FA07E715CBBDCCA11EE72C6.jpg" alt=""></li>
+        <li><img src="https://res.vmallres.com/pimages/detailImg/2020/04/30/0FF5C71CDB01850F8D1EC8E413D31B8D0E353A7DF1A8F232.jpg" alt=""></li>
+    </ul>
+    <!-- ----------- -->
+    <!-- 20170519-规格参数-start -->
+<div id="productParameter" class="product-parameter tit2">
+    <div class="layout" id="product-parameter-main">
+        <h2 id="productParameterId" class="product-title" style="font-size: 25px;">规格参数</h2>
+        <div class="hr-20"></div>
+        <div id="parameterDetailTips" class= "hide">正在加载...</div>
+        <!--<ul class="product-parameter-main  clearfix"></ul>-->
+    </div>
+
+    <div id="productDetailParameter" class="product-parameter-detail relative">
+    </div>
+</div>
+
+
+<!-- 20170519-规格参数-end -->
+<div class="hr-60"></div>
+<!-- 20170519-包装-start -->
+
+<div id="packagId" class="layout tit3">
+    <h2 id="packagTitleId" class="product-title" style="font-size: 25px;">包装</h2>
+    <div class="hr-20"></div>
+    <div id="pro-tab-package-service-content" class="product-packing clearfix">
+                <div id="pro-tab-package-content-10086760383412"><p><em>手机（含内置电池）X 1</em><em>华为SuperCharge充电器 X 1</em><em>Type-C 数据线 X 1</em><em>Type-C 数字耳机X 1</em><em>透明保护壳 X 1</em><em>快速指南 X 1</em><em>取卡针 X 1</em><em>保修卡 X 1</em><em>（备注：最终以实物为准）</em></p></div>
+    </div>
+</div>
+<!-- 20170519-包装-end -->
+
+
+<!-- 20170519-售后服务-start -->
+<div class="layout" id="customerServiceLocation">
+    <h2 id="customerServiceTitle" class="product-title" style="font-size: 25px;">售后服务</h2>
+    <div class="hr-20"></div>
+    <div id="customerServiceDiv" class="product-word">
+        <div class="product-word-middle" id="pro-tab-service-content">
+                    <div id="pro-tab-service-content-10086760383412"><p><span style="color: rgb(51,51,51);">本产品全国联保，享受三包服务，保修期：1年</span><br><span style="color: rgb(51,51,51);">如因质量问题或性能故障，凭华为客户服务中心出具的质量检测证明，享受7日内退货，15日内换货，15日以上在保修期内可享受免费维修等三包服务</span><br><span style="color: rgb(51,51,51);">华为消费者服务热线：950800</span><br><span style="color: rgb(51,51,51);">华为官方服务软件：服务App</span><br><span style="color: rgb(51,51,51);">华为消费者业务官网-服务与支持：<a href="https://consumer.huawei.com/cn/support/">https://consumer.huawei.com/cn/support/</a></span></p></div>
+        </div>
+    </div>
+</div>
+<!-- 20170519-售后服务-end -->
+
+<!-- 20170519-免责声明-start -->
+<div id="productDetailstips" class="layout">
+    <div  id="productWordId" class="product-word">
+        <ul>
+                <p><li>*因可能存在系统缓存，页面更新导致价格变动异常等不确定性情况出现，如您发现活动商品标价或促销信息有异常，请您立即联系我们，以便我们及时补正。</li><li>*以上页面中的产品图片及屏幕内容仅作示意，实物产品效果（包括但不限于外观、颜色、尺寸）和屏幕显示内容（包括但不限于背景、UI、配图）可能略有差异，请以实物为准。</li></p><li>*以上页面中的数据为理论值，均来自华为内部实验室，于特定测试环境下所得（请见各项具体说明），实际使用中可能因产品个体差异、软件版本、使用条件和环境因素不同略有不同，请以实际使用的情况为准。</li><li>*为提供尽可能准确的产品信息、规格参数、产品特性，华为或荣耀可能实时调整和修订以上页面中的文字表述、图片效果等内容，以求与实际产品性能、规格、指数、零部件等信息相匹配，由于产品批次和生产供应因素实时变化，如遇确有进行上述修改和调整必要的情形，恕不专门通知。</li>
+        </ul>
+    </div>
+    <div class="hr-60"></div>
+</div>
+     <!-- footer开始 -->
+     <div class="slogan-container">
+         <div class="slogan">
+             <ul>
+                 <li class="s1">
+                     <a href=""><i></i>百强企业 品质保证
+                 </a>
+                 </li>
+                 <li class="s2">
+                     <a href="">
+                         <i></i> 7天退货 15天换货
+                     </a>
+                 </li>
+                 <li class="s3">
+                     <a href="">
+                         <i></i> 48元起免运费
+                     </a>
+                 </li>
+                 <li class="s4">
+                     <a href="">
+                         <i></i> 1000家维修网点 全国联保
+                     </a>
+                 </li>
+             </ul>
+         </div>
+     </div>
+     <div class="service-container">
+         <div class="service">
+             <div class="service-l fl">
+                 <dl class="s1">
+                     <dt>
+                     <p class="title">购物相关</p>
+                 </dt>
+                     <dd>
+                         <ol>
+                             <li><a href="">购物指南</a></li>
+                             <li><a href="">配送方式</a></li>
+                             <li><a href="">支付方式</a></li>
+                             <li><a href="">常见问题</a></li>
+                         </ol>
+                     </dd>
+                 </dl>
+                 <dl class="s1">
+                     <dt>
+                         <p class="title">保修与退换货</p>
+                     </dt>
+                     <dd>
+                         <ol>
+                             <li><a href="">保修政策</a></li>
+                             <li><a href="">退换货政策</a></li>
+                             <li><a href="">退换货流程</a></li>
+                             <li><a href="">保修状态查询</a></li>
+                             <li><a href="">配件防伪查询</a></li>
+                         </ol>
+                     </dd>
+                 </dl>
+                 <dl class="s1">
+                     <dt>
+                             <p class="title">维修与技术支持</p>
+                         </dt>
+                     <dd>
+                         <ol>
+                             <li><a href="">售后网点</a></li>
+                             <li><a href="">预约维修</a></li>
+                             <li><a href="">手机寄修</a></li>
+                             <li><a href="">备件价格查询</a></li>
+                             <li><a href="">上门服务</a></li>
+                         </ol>
+                     </dd>
+                 </dl>
+                 <dl class="s1">
+                     <dt>
+                                 <p class="title">特色服务</p>
+                             </dt>
+                     <dd>
+                         <ol>
+                             <li><a href="">防伪查询</a></li>
+                             <li><a href="">补够保障</a></li>
+                             <li><a href="">以旧换新</a></li>
+                             <li><a href="">礼品包装</a></li>
+                         </ol>
+                     </dd>
+                 </dl>
+                 <dl class="s1">
+                     <dt>
+                                     <p class="title">关于我们</p>
+                                 </dt>
+                     <dd>
+                         <ol>
+                             <li><a href="">公司介绍</a></li>
+                             <li><a href="">华为商城简介</a></li>
+                             <li><a href="">华为线下门店</a></li>
+                             <li><a href="">荣耀线下门店</a></li>
+                             <li><a href="">诚征英才</a></li>
+                             <li><a href="">意见反馈</a></li>
+                         </ol>
+                     </dd>
+                 </dl>
+                 <dl class="s1">
+                     <dt class="relative">
+                                         <p class="title">友情链接</p>
+                                         <p class="button">
+                                             <span class="btn btn-prev disabled iconfont icon-zuo"></span>
+                                             <span class="btn btn-next iconfont icon-zuo-copy"></span>
+                                         </p>
+                                     </dt>
+                     <dd>
+                         <ol>
+                             <li><a href="">华为集团</a></li>
+                             <li><a href="">华为CBG官网</a></li>
+                             <li><a href="">荣耀官网</a></li>
+                             <li><a href="">花粉俱乐部</a></li>
+                             <li><a href="">华为云</a></li>
+                         </ol>
+                     </dd>
+                 </dl>
+             </div>
+             <div class="service-r fl">
+                 <dl class="s7">
+                     <dt class="">
+                     <p class="title">950805</p>
+                 </dt>
+                     <dd>
+                         <ol>
+                             <li><a href="">7x24小时客服热线（仅收市话费）</a></li>
+                         </ol>
+                     </dd>
+                     <dd><a href="" class="service-btn btn-line-primary"><i class="iconfont">&#xe62b;</i>在线客服</a></dd>
+                 </dl>
+                 <div class="service-code clearfix">
+                     <h2>关注Vmall：</h2>
+                     <ul class="clearfix">
+                         <li><a href="#"><i class="iconfont">&#xe613;</i></a></li>
+                         <li><a href="#"><i class="iconfont">&#xe677;</i></a></li>
+                         <li><a href="#"><i class="iconfont">&#xe643;</i></a></li>
+                         <li><a href="#"><i class="iconfont">&#xe82e;</i></a></li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <!-- 最下面的vmall -->
+     <div class="footer-container" style="padding-bottom: 0px;">
+         <div class="footer">
+             <div class="footer-warrant-area clearfix">
+                 <p class="footer-warrant-logo fl">
+                     <a href="">
+                         <img src="https://res.vmallres.com/pimages//sale/2019-01/wLelYbpMVWbj9Xpaa5Fk.png" alt="">
+                     </a>
+                 </p>
+                 <div class="fl">
+                     <ul class="footer-warrant-link">
+                         <li><a href="javascript:;">华为集团</a></li>
+                         <li><a href="javascript:;">华为CBG官网</a></li>
+                         <li><a href="javascript:;">荣耀官网</a></li>
+                         <li><a href="javascript:;">花粉俱乐部</a></li>
+                         <li><a href="javascript:;">华为应用市场</a></li>
+                         <li><a href="javascript:;">EMUI</a></li>
+                         <li><a href="javascript:;">华为终端云空间</a></li>
+                         <li><a href="javascript:;">开发者联盟</a></li>
+                         <li><a href="javascript:;">华为商城手机版</a></li>
+                         <li><a href="javascript:;">网站地图</a></li>
+                     </ul><a href="javascript:;" title="隐私声明">隐私声明</a> <a href="javascript:;" title="服务协议">服务协议</a> <a href="javascript:;" title="COOKIES">COOKIES</a> Copyright © 2012-2019 华为终端有限公司 版权所有 <a href="javascript:;">粤公网安备 44190002003939号</a><br>增值电信业务经营许可证：粤B2-20190762
+                     <em>|</em>备案主体编号：44201919072182</div>
+                 <p class="fr footer-warrant-img">
+                     <a href="javascript:;" class="fl"><img src="https://res.vmallres.com/pimages//sale/2018-05/20180522101715775.jpg" alt="TRUSTe隐私认证" title="TRUSTe隐私认证"> </a>
+                     <a href="javascript:;" class="fl"><img src="https://res.vmallres.com/pimages//template/content/2016/20160226162415360.png" alt="电子营业执照" title="电子营业执照"></a>
+                 </p>
+             </div>
+         </div>
+     </div>
+     <!-- footer结束 -->
+</body>
+</html>
+<script>
+    $('#procboo').on('mouseover','.footpic>img',function(e){
+        let i = $('.footpic>img')
+        $(this).addClass('pic-red').siblings().removeClass('pic-red');
+        // console.log($('.small>img')[0].src)
+        $('.small>img')[0].src =e.target.src
+});
+    $('#procboo').on('click','.icon-yuan',function(){
+        $('.footpic>img').css('left','-270px')
+});
+    $('#procboo').on('click','.icon-zuo',function(){
+        $('.footpic>img').css('left','0px')
+});
+// 放大镜
+    $('#procboo').on('mouseover','.small',function(e){
+        $('.big').addClass('show');
+        $('.move').addClass('show')
+        // console.log($('.bigpic')[0])
+        $('.bigpic')[0].src = $('.small>img')[0].src
+ });
+
+    $('#procboo').on('mouseout','.small',function(){
+        $('.big').removeClass('show')
+        $('.move').removeClass('show')
+ });
+
+     $('#procboo').on('mousemove','.small',function(e){
+        let l = e.pageX - $(".small").offset().left - ($(".move").width() / 2)
+        let t = e.pageY - $(".small").offset().left - ($(".move").height() / 2)
+        // console.log(l,t)
+        if (l < 0) {
+            l = 0
+        }
+        if (l > $(this).width() - $(".move").width()) {
+            l = $(this).width() - $(".move").width()
+        }
+        if (t < 0) {
+            t = 0
+        }
+        if (t > $(this).height() - $(".move").height()) {
+            t = $(this).height() - $(".move").height()
+        }
+
+        $(".move").css({
+        "left": l,
+        "top": t
+        })
+        
+        let pX = l / ($(".small").width() - $(".move").width())
+        let pY = t / ($(".small").height() - $(".move").height())
+        // console.log(pX,pY)
+        $(".bigpic").css({
+            "left": -pX * ($(".bigpic").width() - $(".big").width()),
+            "top": -pY * ($(".bigpic").height() - $(".big").height())
+        })
+
+});
+</script>

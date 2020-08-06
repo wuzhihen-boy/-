@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+ul, li {
+  list-style-type: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 16px;
+  font-weight: normal; }
+
+b, strong {
+  font-weight: normal; }
+
+i, em {
+  font-style: normal; }
+
+input {
+  background-color: #f2f2f2;
+  border: none;
+  outline: none; }
+
+.topContent .gray-customer-header {
+  width: 100%;
+  height: 48px;
+  background-color: #F2F2F2; }
+  .topContent .gray-customer-header .head_center {
+    width: 1200px;
+    height: 48px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; }
+    .topContent .gray-customer-header .head_center .main-logo .adHeadTitle {
+      font-weight: 700;
+      margin-left: 11px; }
+    .topContent .gray-customer-header .head_center .website-name .split-line {
+      width: 1px;
+      height: 20px;
+      background-color: rgba(0, 0, 0, 0.2);
+      display: inline-block;
+      margin-left: 16px; }
+    .topContent .gray-customer-header .head_center .website-name .adHeadTitle {
+      font-weight: 700;
+      margin-left: 11px; }
+
+.hwid-full-header-title {
+  width: 100%;
+  height: 221px;
+  text-align: center;
+  line-height: 221px;
+  font-size: 32px; }
+
+.hwid-fullpage {
+  width: 840px;
+  height: 479px;
+  margin: 0 auto;
+  display: flex; }
+  .hwid-fullpage .hwid-qrcode-full-box {
+    width: 360px;
+    height: 273px;
+    text-align: center; }
+    .hwid-fullpage .hwid-qrcode-full-box .hwid-qrCode-over-time-shade {
+      width: 200px;
+      height: 200px;
+      background-color: #F7F7F7;
+      padding: 20px;
+      box-sizing: border-box;
+      margin: 0 0 50px 0;
+      margin-left: 80px;
+      border-radius: 10px; }
+    .hwid-fullpage .hwid-qrcode-full-box span {
+      font-size: 12px;
+      color: #838383; }
+  .hwid-fullpage .hwid-fullpage-split-line {
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 0 60px;
+    width: 1px;
+    height: 300px;
+    display: inline-block; }
+  .hwid-fullpage .hwid-qrcode-right-box {
+    width: 360px;
+    height: 422px;
+    position: relative; }
+    .hwid-fullpage .hwid-qrcode-right-box form .iconfont-size {
+      font-size: 25px;
+      color: #B0B0B0;
+      position: absolute;
+      left: 320px;
+      top: 84px; }
+    .hwid-fullpage .hwid-qrcode-right-box form .userAccount {
+      margin-bottom: 25px; }
+    .hwid-fullpage .hwid-qrcode-right-box form .hwid-input {
+      width: 360px;
+      height: 48px;
+      padding: 0 10px;
+      box-sizing: border-box;
+      border-radius: 10px;
+      border: none;
+      background-color: #F2F2F2; }
+    .hwid-fullpage .hwid-qrcode-right-box form .click_pwdlogin_submitLogin {
+      width: 360px;
+      height: 48px;
+      border: none;
+      color: #fff;
+      font-size: 14.4px;
+      font-weight: 700;
+      border-radius: 10px;
+      background-color: #EBA7AA;
+      margin-top: 30px; }
+    .hwid-fullpage .hwid-qrcode-right-box a {
+      color: #007dff;
+      padding-top: 20px;
+      display: inline-block;
+      font-size: 13px; }
+    .hwid-fullpage .hwid-qrcode-right-box .hwid-full-link {
+      width: 360px;
+      display: flex;
+      justify-content: center; }
+      .hwid-fullpage .hwid-qrcode-right-box .hwid-full-link li {
+        padding: 0 15px;
+        margin-top: 20px; }
+      .hwid-fullpage .hwid-qrcode-right-box .hwid-full-link span {
+        width: 1px;
+        height: 16px;
+        background-color: rgba(0, 0, 0, 0.1);
+        margin-top: 40px; }
+    .hwid-fullpage .hwid-qrcode-right-box .hwid-third-login-list {
+      width: 360px;
+      display: flex;
+      justify-content: center; }
+      .hwid-fullpage .hwid-qrcode-right-box .hwid-third-login-list .icon_list {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #F7F7F7;
+        text-align: center;
+        line-height: 40px;
+        font-size: 20px;
+        margin: 35px 25px; }
+      .hwid-fullpage .hwid-qrcode-right-box .hwid-third-login-list i:nth-child(1):hover {
+        background-color: #506A7E;
+        color: #fff; }
+      .hwid-fullpage .hwid-qrcode-right-box .hwid-third-login-list i:nth-child(2):hover {
+        background-color: #00AAEF;
+        color: #fff; }
+      .hwid-fullpage .hwid-qrcode-right-box .hwid-third-login-list i:nth-child(3):hover {
+        background-color: #47CC47;
+        color: #fff; }
+
+.customer-footer {
+  width: 100%;
+  height: 110px;
+  background-color: #F2F2F2; }
+  .customer-footer .ft {
+    width: 1200px;
+    height: 110px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .customer-footer .ft a {
+      color: #000; }
+    .customer-footer .ft em {
+      color: rgba(0, 0, 0, 0.2); }

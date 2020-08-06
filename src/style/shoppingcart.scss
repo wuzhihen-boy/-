@@ -1,0 +1,35 @@
+@charset 'utf-8';
+@import './i-public.scss';
+.login-prompt{
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+.sc-empty{
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.hr-20{
+    height: 20px;
+}
+.sc-pro-title{
+    width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+#cart-form{
+    width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.sc-total-tool{
+    margin-top: 10px;
+}
+
+.left1{
+    margin-right: 10px;
+}

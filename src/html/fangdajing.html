@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>原生js仿华为产品放大镜效果</title>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        
+
+        .clearfix::before,
+        .clearfix::after {
+            content: "";
+            display: table;
+        }
+
+        .clearfix::after {
+            clear: both;
+        }
+
+
+        .box {
+            width: 450px;
+            height: 450px;
+        }
+
+        .box a.phone-display {
+            display: block;
+            position: relative;
+            height: 100%;
+        }
+
+
+        .bottom-nav{
+            margin-top: 20px;
+        }
+        
+        .bottom-nav div.tab-btn{
+            position: relative;
+            width: 40px;
+            height: 60px;
+            cursor: pointer;
+        }
+        
+        .tab-btn:hover{
+            opacity: .6;
+        }
+
+        .tab-btn.btn-left{
+            float: left;
+        }
+
+        .tab-btn.btn-right{
+            float: right;
+        }
+
+        .shift-icon {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 32px;
+            height: 32px;
+            border: 1px solid #999;
+            border-radius: 50%;
+        }
+
+        .shift-icon>span {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 10px;
+            height: 10px;
+            border-bottom: 1.5px solid #999;
+        }
+
+        .btn-left i.shift-icon>span {
+            border-left: 1.5px solid #999;
+            transform: translate(-30%, -50%) rotate(45deg);
+        }
+        .btn-right i.shift-icon>span {
+            border-right: 1.5px solid #999;
+            transform: translate(-70%, -50%) rotate(-45deg);
+        }
+
+
+        .bottom-nav div.bottom-center-nav{
+            position: relative;
+            height: 68px;
+            margin: 0 50px;
+            overflow: hidden;
+        }
+        .bottom-center-nav ul.small-img-ul {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+        }
+        .small-img-ul li.img{
+            float: left;
+            width: 68px;
+            height: 100%;
+            border:1px solid transparent;
+            background-size: 100% 100%;
+            cursor: pointer;
+            margin-left: 1px;
+        }
+        .small-img-ul li.img.active{
+            border-color: rgb(160, 27, 27);
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <a href="javascript:;" class="phone-display"></a>
+<div class="bottom-nav clearfix">
+<div class="tab-btn btn-left">
+    <i class="shift-icon">
+        <span></span>
+    </i>
+</div>
+<div class="tab-btn btn-right">
+    <i class="shift-icon">
+        <span></span>
+    </i>
+</div>
+<div class="bottom-center-nav">
+    <ul class="small-img-ul">
+    </ul>
+</div>
+</div>
+</div>
+<script src="../js/fangdajing.js"></script>
+</body>
+</html>

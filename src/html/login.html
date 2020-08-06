@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../font_login/iconfont.css">
+    <link rel="stylesheet" href="../style/login.css">
+    <script src="../js/require.js" data-main="../js/main.login"></script>
+    <script src="../js/jquery.min.js"></script>
+    <style>
+        .red {
+            color: red;
+        }
+        
+        .green {
+            color: #007dff;
+        }
+        .red2{
+            border: 1px solid red;
+        }
+        .green2{
+            border: 1px solid #007dff;
+        }
+    </style>
+</head>
+<body hwid-full-page style="height: 100%;">
+    <div class="topContent">
+        <!-- 头部  -->
+    <div class="gray-customer-header">
+        <div class="head_center">
+                <div class="main-logo adHeadPicContainer"> <img src="https://id1.cloud.huawei.com/CAS/up/idmw_rss_53/logos/HUAWEI.svg" class="adHeadPic"> </div> <div class="website-name"> <b class="split-line"></b> <b class="adHeadTitle">华为商城</b> </div>
+        </div>	
+    </div>
+    <script>
+        $(function() {
+            $('#phone').on('keyup', function() {
+                let xhr = new XMLHttpRequest();
+                xhr.open('post', '../../interface/post.php');
+                // 设置请求头
+                // xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); // 表单数据
+                
+                xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
+
+
+                let data = {
+                    phone: this.value
+                };
+
+                // xhr.send('phone=' + this.value); //数据 写在send中
+                xhr.send(JSON.stringify(data));
+
+
+                xhr.onreadystatechange = function() {
+                    if (xhr.status == 200 && xhr.readyState == 4) {
+                        // console.log(xhr.responseText)
+                        let data = JSON.parse(xhr.responseText);
+                        $('#res').html(data.msg);
+
+                        if (data.has) {
+                            $('#res').removeClass('green').addClass('red');
+                            $('.hwid-btn').css('background-color','#9FCEFF')
+                            $('.hwid-btn').attr('disabled','disabled')
+                            $('#yzm-c').css('color','#c5dcf4')
+                            $('.hwid-input-container2').removeClass('green2').addClass('red2');
+                        } else {
+                            $('#res').removeClass('red').addClass('green');
+                            $('.hwid-btn').css('background-color','#007DFF')
+                            $('.hwid-btn').removeAttr('disabled','disabled')
+                            $('#yzm-c').css('color','#007dff')
+                            $('.hwid-input-container2').removeClass('red2').addClass('green2');
+                        }
+                    }
+                }
+            });
+            
+            $('.iconfont').on('click',function(){
+                $('#password').attr('type','text');
+            });
+            
+            $('#yzm-c').on('click',function(){
+                alert('验证码发送成功！');
+                $('#yzm-c').html('');
+                let timer_num = 60;
+                let n = setInterval(function(){
+                    timer_num--;
+                    $('#yzm-c').html(timer_num);
+                
+                    if (timer_num == 0) {
+                        clearInterval(n);
+                    $('#yzm-c').html('获取验证码');
+                    }
+                },1000)
+            })
+               
+            $('#password').on('keyup',function(){
+                if (!(/^[a-zA-Z0-9]{8,16}$/).test($('#password').val())) {
+                    $('#res2').fadeIn();
+                    $('#res2').addClass('red')
+                    $('#res2').text("*密码格式错误,密码不能含有非法字符，长度在8-16之间");
+                    $('.hw-c2').removeClass('green2').addClass('red2');
+                    return;
+                } else {
+                    $('#res2').fadeOut();
+                    $('#res2').text("");
+                    $('.hw-c2').removeClass('red2').addClass('green2');
+                }
+            });
+
+            $('#password2').on('keyup',function(){
+                // console.log($('#passwor').val(),$('#password2').val())
+                if ($('#password').val()!=$('#password2').val()) {
+                    $('#res3').fadeIn();
+                    $('#res3').addClass('red')
+                    $('#res3').text("*俩次密码不一致");
+                    $('.hw-c3').removeClass('green2').addClass('red2');
+                    // return;
+                } else {
+                    $('#res3').fadeOut();
+                    $('#res3').text("");
+                    $('.hw-c3').removeClass('red2').addClass('green2');
+                }
+            });
+        });
+    </script>
+    <!-- 华为注册账号 -->
+    <div class="hwid-root">
+        <div class="hwid-register-main">
+            <div class="hwid-left">
+                <div class="hwid-tab-item left-bgc"><i class="iconfont icon-shouji"></i> 手机号注册</div>
+                <div class="hwid-tab-item"><i class="iconfont icon-youxiang"></i> 邮箱注册</div>
+            </div>
+            <div class="hwid-reg-detail">
+                <form action="../../interface/login.php" method="POST">
+                    <div class="hwid-registerTitle">
+                        <span>华为账号注册</span>
+                        <div class="hwid-registerTitle-tx"><i>已有帐号，</i><a href="JavaScript:">去登录></a></div>
+                    </div>
+                    <div class="hwid-input-container hwid-input">
+                        <span>国家/地区</span>
+                        <i>中国<div class="sanjiao sanjiao-p"></div></i>
+                    </div>
+                    <div class="hwid-input hwid-input-container2" style="position: relative;">
+                        <i>+86(中国)<div class="sanjiao sanjiao-p2"></div><span></span></i>
+                        <input type="text" placeholder="请输入手机号" class="phonenum" name="phone" id="phone">
+                        <div id="res" style="position: absolute;top: 40px;"></div>
+                    </div>
+                    <div class="hwid-input">
+                        <input type="text" placeholder="请输入短信验证码" id="yzm">
+                        <span id="yzm-c">获取验证码</span>
+                    </div>
+                    <div class="hwid-input hw-c2" style="position: relative;">
+                        <input type="password" placeholder="密码" class="pass" name="password" id="password">
+                        <span class="iconfont icon-yanjing-bi"></span>
+                        <div id="res2" style="position: absolute;top: 40px;"></div>
+                    </div>
+                    <div class="hwid-input hw-c3" style="position: relative;">
+                        <input type="password" placeholder="确认密码" class="pass" name="password2" id="password2">
+                        <span class="iconfont icon-yanjing-bi"></span>
+                        <div id="res3" style="position: absolute;top: 40px;"></div>
+                    </div>
+                    <div class="hwid-input">
+                        <b>出生日期</b>
+                        <div class="input-right">
+                            <span>2000年<i class="sanjiao"></i></span>
+                            <span>6月<i class="sanjiao"></i></span>
+                            <span>24日<i class="sanjiao"></i></span>
+                        </div>
+                        <div class="iconfont icon-tishi"></div>
+                    </div>
+                    <input type="submit" value="注册" class="hwid-btn" style="margin-left: 70px;cursor: pointer;" >
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 尾部 -->
+    <div class="customer-footer">
+        <div class="ft">
+            <!--授权  -->
+            <div class="warrant-area">
+                <p style="text-align: center;line-height:20px;height:20px;">
+                 
+                    
+                            <a href="https&#x3a;&#x2f;&#x2f;id1.cloud.huawei.com&#x2f;AMW&#x2f;portal&#x2f;agreements&#x2f;userAgreement&#x2f;zh-cn_userAgreement.html&#x3f;version&#x3d;china&amp;countryCode&#x3d;cn&amp;reqClientType&#x3d;26&amp;loginChannel&#x3d;26000000" class="rule" target="_blank">华为帐号与云空间用户协议</a>            	
+                            <em class="foot_em">|</em>
+                            <a href="https&#x3a;&#x2f;&#x2f;id1.cloud.huawei.com&#x2f;AMW&#x2f;portal&#x2f;agreements&#x2f;accPrivacyStatement&#x2f;zh-cn_accPrivacyStatement.html&#x3f;version&#x3d;china&amp;reqClientType&#x3d;26&amp;loginChannel&#x3d;26000000" class="rule" target="_blank">关于华为帐号与云空间隐私的声明</a>
+                            <span class="foot_em"><em style='font-style: normal'>|</em> <a style="padding:0 10px;" target="blank" href="https://id1.cloud.huawei.com/AMW/portal/faq/zh-cn_faq.html?version=china&countryCode=cn&lang=zh-cn&reqClientType=26&loginChannel=26000000">常见问题</a></span>
+                            
+                    
+                    
+                    
+                
+            
+                
+                
+                    
+                      <em class="foot_em">|</em>
+                      <a href="https://consumer.huawei.com/cn/legal/cookie-policy/" class="rule" target="_blank">Cookies</a>
+                    
+                    
+                    
+                
+               
+                 
+                </p>
+                
+    
+                
+                    
+                        
+                        <p style="line-height: 12px;height:12px;margin-top: 10px; color: #000; opacity: 0.3;">
+                            Copyright © 2011-2020  华为软件技术有限公司  版权所有  保留一切权利  苏B2-20070200号 | 苏ICP备09062682号-9
+                           </p>
+                        
+                        
+                    
+                
+                
+            </div>
+        </div>
+</body>
+</html>

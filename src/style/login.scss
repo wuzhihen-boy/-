@@ -1,0 +1,261 @@
+@charset "utf-8";
+*{padding: 0;margin: 0;}
+a{
+	text-decoration: none;
+}
+ul,li{
+	list-style-type: none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-size: 16px;
+    font-weight: normal;
+}
+b,strong{
+    font-weight: normal;
+}
+i,em{
+    font-style: normal;
+}
+input{
+    background-color: #f2f2f2;
+    border: none;
+    outline: none;
+}
+//头部
+.topContent{
+    .gray-customer-header{
+        width: 100%;
+        height: 48px;
+        background-color:#F2F2F2;
+        .head_center{
+            width: 1200px;
+            height: 48px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            .main-logo{
+                .adHeadTitle{
+                    font-weight: 700;
+                    margin-left: 11px;
+                }
+            }
+            .website-name{
+                .split-line{
+                    width: 1px;
+                    height: 20px;
+                    background-color: rgba(0,0,0,0.2);
+                    display: inline-block;
+                    margin-left: 16px;
+                }
+                .adHeadTitle{
+                    font-weight: 700;
+                    margin-left: 11px;
+                }
+            }
+        }
+    }
+}
+//华为注册账号
+.hwid-root{
+    width: 100%;
+    height: 790px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    .hwid-register-main{
+        width: 1200px;
+        height: 790px;
+        // margin: 0 auto;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        .hwid-reg-detail{
+            width: 442px;
+            height: 790px;
+            // margin: 0 auto;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            .hwid-registerTitle{
+                width: 442px;
+                height: 73px;
+                text-align: center;
+                margin-top: 60px;
+                margin-bottom: 60px;
+                span{
+                    font-size: 32px;
+                    color: #191919;
+                    display: block;
+                    margin-bottom: 5px;
+                }
+                .hwid-registerTitle-tx{
+                    i{
+                        font-size: 18px;
+                    }
+                    a{
+                        font-size: 18px;
+                    }
+                }
+            }
+            .hwid-input{
+                width: 442px;
+                height: 50px;
+                border-radius: 8px;
+                background:#F2F2F2;
+                padding: 0 16px;
+                display: flex;
+                justify-content: space-between;
+                line-height: 50px;
+                box-sizing: border-box;
+                font-size: 14px;
+                margin-bottom: 30px;
+                i{  
+                    position: relative;
+                    display: inline-block;
+                    margin-right: 20px;
+                    .sanjiao{
+                        width: 0px;
+                        height: 0px;
+                        // border: 5px solid black;
+                        border-top: 5px solid black;
+                        border-left: 5px solid transparent;
+                        border-right: 5px solid transparent;
+                        border-bottom: 5px solid transparent;
+                    }
+                    .sanjiao-p{
+                        position: absolute;
+                        top: 22px;
+                        left: 35px;
+                    }
+                }
+            }
+            .hwid-input-container2{
+                position: relative;
+                i{
+                    .sanjiao-p2{
+                        position: absolute;
+                        top: 22px;
+                        left: 70px;
+                    }
+                    span{
+                        display: inline-block;
+                        width: 1px;
+                        height: 27px;
+                        background-color: rgba(0,0,0,0.2);
+                        position: absolute;
+                        left: 110px;
+                        top:13px
+                    }
+                }
+                input{
+                    width: 270px;
+                    border: none;
+                    background-color: #f2f2f2;
+                }
+            }
+            div:nth-child(4){
+                span{
+                    color: #C5DCF4;
+                    cursor: pointer;
+                }
+            }
+            div:nth-child(5){
+                span{
+                    font-size: 25px;
+                    cursor: pointer;
+                }
+            }
+            div:nth-child(6){
+                span{
+                    font-size: 25px;
+                    cursor: pointer;
+                }
+            }
+            div:nth-child(7){
+                position: relative;
+                .input-right{
+                    position: absolute;
+                    right: 0px;
+                    span{
+                        cursor: pointer;
+                        .sanjiao{
+                            width: 0px;
+                            height: 0px;
+                            // border: 5px solid black;
+                            border-top: 5px solid black;
+                            border-left: 5px solid transparent;
+                            border-right: 5px solid transparent;
+                            border-bottom: 5px solid transparent;
+                            left: 5px;
+                            top:2px;
+                        }
+                    }
+                }
+                .icon-tishi{
+                    position: absolute;
+                    right: -40px;
+                    font-size: 20px;
+                    color: #808080;
+                    cursor: pointer;
+                }
+            }
+            .pass{
+                width: 250px;
+            }
+            .hwid-btn{
+                width: 310px;
+                height: 50px;
+                border: none;
+                border-radius: 8px;
+                font-size: 18px;
+                color: #fff;
+                margin-top: 35px;
+                background-color: #9FCEFF;
+            }
+        }
+        // 左部
+        .hwid-left{
+            width: 272px;
+            height: 105px;
+            position: absolute;
+            top:50px;
+            left: 0;
+            .hwid-tab-item{
+                width: 272px;
+                height: 50px;
+                border-radius: 8px;
+                line-height: 50px;
+                padding: 0 40px;
+                box-sizing: border-box;
+                font-size: 14px;
+                &:hover{
+                    background-color: #E5F2FF;
+                }
+            }
+            .left-bgc{
+                background: #F2F2F2;
+            }
+        }
+    }
+}
+//尾部
+.customer-footer{
+    width: 100%;
+    height: 110px;
+    background-color: #F2F2F2;
+    .ft{
+        width: 1200px;
+        height: 110px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a{
+            color: #000;
+        }
+        em{
+            color: rgba(0,0,0,0.2);
+        }
+    }
+}

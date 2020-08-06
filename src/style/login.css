@@ -1,0 +1,203 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+ul, li {
+  list-style-type: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 16px;
+  font-weight: normal; }
+
+b, strong {
+  font-weight: normal; }
+
+i, em {
+  font-style: normal; }
+
+input {
+  background-color: #f2f2f2;
+  border: none;
+  outline: none; }
+
+.topContent .gray-customer-header {
+  width: 100%;
+  height: 48px;
+  background-color: #F2F2F2; }
+  .topContent .gray-customer-header .head_center {
+    width: 1200px;
+    height: 48px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; }
+    .topContent .gray-customer-header .head_center .main-logo .adHeadTitle {
+      font-weight: 700;
+      margin-left: 11px; }
+    .topContent .gray-customer-header .head_center .website-name .split-line {
+      width: 1px;
+      height: 20px;
+      background-color: rgba(0, 0, 0, 0.2);
+      display: inline-block;
+      margin-left: 16px; }
+    .topContent .gray-customer-header .head_center .website-name .adHeadTitle {
+      font-weight: 700;
+      margin-left: 11px; }
+
+.hwid-root {
+  width: 100%;
+  height: 790px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center; }
+  .hwid-root .hwid-register-main {
+    width: 1200px;
+    height: 790px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; }
+    .hwid-root .hwid-register-main .hwid-reg-detail {
+      width: 442px;
+      height: 790px;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center; }
+      .hwid-root .hwid-register-main .hwid-reg-detail .hwid-registerTitle {
+        width: 442px;
+        height: 73px;
+        text-align: center;
+        margin-top: 60px;
+        margin-bottom: 60px; }
+        .hwid-root .hwid-register-main .hwid-reg-detail .hwid-registerTitle span {
+          font-size: 32px;
+          color: #191919;
+          display: block;
+          margin-bottom: 5px; }
+        .hwid-root .hwid-register-main .hwid-reg-detail .hwid-registerTitle .hwid-registerTitle-tx i {
+          font-size: 18px; }
+        .hwid-root .hwid-register-main .hwid-reg-detail .hwid-registerTitle .hwid-registerTitle-tx a {
+          font-size: 18px; }
+      .hwid-root .hwid-register-main .hwid-reg-detail .hwid-input {
+        width: 442px;
+        height: 50px;
+        border-radius: 8px;
+        background: #F2F2F2;
+        padding: 0 16px;
+        display: flex;
+        justify-content: space-between;
+        line-height: 50px;
+        box-sizing: border-box;
+        font-size: 14px;
+        margin-bottom: 30px; }
+        .hwid-root .hwid-register-main .hwid-reg-detail .hwid-input i {
+          position: relative;
+          display: inline-block;
+          margin-right: 20px; }
+          .hwid-root .hwid-register-main .hwid-reg-detail .hwid-input i .sanjiao {
+            width: 0px;
+            height: 0px;
+            border-top: 5px solid black;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid transparent; }
+          .hwid-root .hwid-register-main .hwid-reg-detail .hwid-input i .sanjiao-p {
+            position: absolute;
+            top: 22px;
+            left: 35px; }
+      .hwid-root .hwid-register-main .hwid-reg-detail .hwid-input-container2 {
+        position: relative; }
+        .hwid-root .hwid-register-main .hwid-reg-detail .hwid-input-container2 i .sanjiao-p2 {
+          position: absolute;
+          top: 22px;
+          left: 70px; }
+        .hwid-root .hwid-register-main .hwid-reg-detail .hwid-input-container2 i span {
+          display: inline-block;
+          width: 1px;
+          height: 27px;
+          background-color: rgba(0, 0, 0, 0.2);
+          position: absolute;
+          left: 110px;
+          top: 13px; }
+        .hwid-root .hwid-register-main .hwid-reg-detail .hwid-input-container2 input {
+          width: 270px;
+          border: none;
+          background-color: #f2f2f2; }
+      .hwid-root .hwid-register-main .hwid-reg-detail div:nth-child(4) span {
+        color: #C5DCF4;
+        cursor: pointer; }
+      .hwid-root .hwid-register-main .hwid-reg-detail div:nth-child(5) span {
+        font-size: 25px;
+        cursor: pointer; }
+      .hwid-root .hwid-register-main .hwid-reg-detail div:nth-child(6) span {
+        font-size: 25px;
+        cursor: pointer; }
+      .hwid-root .hwid-register-main .hwid-reg-detail div:nth-child(7) {
+        position: relative; }
+        .hwid-root .hwid-register-main .hwid-reg-detail div:nth-child(7) .input-right {
+          position: absolute;
+          right: 0px; }
+          .hwid-root .hwid-register-main .hwid-reg-detail div:nth-child(7) .input-right span {
+            cursor: pointer; }
+            .hwid-root .hwid-register-main .hwid-reg-detail div:nth-child(7) .input-right span .sanjiao {
+              width: 0px;
+              height: 0px;
+              border-top: 5px solid black;
+              border-left: 5px solid transparent;
+              border-right: 5px solid transparent;
+              border-bottom: 5px solid transparent;
+              left: 5px;
+              top: 2px; }
+        .hwid-root .hwid-register-main .hwid-reg-detail div:nth-child(7) .icon-tishi {
+          position: absolute;
+          right: -40px;
+          font-size: 20px;
+          color: #808080;
+          cursor: pointer; }
+      .hwid-root .hwid-register-main .hwid-reg-detail .pass {
+        width: 250px; }
+      .hwid-root .hwid-register-main .hwid-reg-detail .hwid-btn {
+        width: 310px;
+        height: 50px;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        color: #fff;
+        margin-top: 35px;
+        background-color: #9FCEFF; }
+    .hwid-root .hwid-register-main .hwid-left {
+      width: 272px;
+      height: 105px;
+      position: absolute;
+      top: 50px;
+      left: 0; }
+      .hwid-root .hwid-register-main .hwid-left .hwid-tab-item {
+        width: 272px;
+        height: 50px;
+        border-radius: 8px;
+        line-height: 50px;
+        padding: 0 40px;
+        box-sizing: border-box;
+        font-size: 14px; }
+        .hwid-root .hwid-register-main .hwid-left .hwid-tab-item:hover {
+          background-color: #E5F2FF; }
+      .hwid-root .hwid-register-main .hwid-left .left-bgc {
+        background: #F2F2F2; }
+
+.customer-footer {
+  width: 100%;
+  height: 110px;
+  background-color: #F2F2F2; }
+  .customer-footer .ft {
+    width: 1200px;
+    height: 110px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .customer-footer .ft a {
+      color: #000; }
+    .customer-footer .ft em {
+      color: rgba(0, 0, 0, 0.2); }
